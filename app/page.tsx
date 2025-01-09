@@ -1,11 +1,11 @@
-import { NavActions } from "@/components/ui/nav-actions"
-import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbList,
-    BreadcrumbPage,
-} from "@/components/ui/breadcrumb"
-import { Separator } from "@/components/ui/separator"
+// import { NavActions } from "@/components/ui/nav-actions"
+// import {
+//     Breadcrumb,
+//     BreadcrumbItem,
+//     BreadcrumbList,
+//     BreadcrumbPage,
+// } from "@/components/ui/breadcrumb"
+// import { Separator } from "@/components/ui/separator"
 import {
     SidebarInset,
     SidebarProvider,
@@ -15,9 +15,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 
 
-
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-// import { Carousel, CarouselItem, CarouselContent, } from "@/components/ui/carousel"
+import DockDemo from "@/components/bottom-bar"
+import Projects from "@/components/project"
 
 
 function App() {
@@ -79,13 +79,14 @@ export default function Page() {
     //     ]
     // }
 
+
+
     return (
         <SidebarProvider>
             {/* <AppSidebar /> */}
             <SidebarInset>
-                <header className="flex h-14 shrink-0 items-center gap-2">
+                {/*  <header className="flex h-14 shrink-0 items-center gap-2">
                     <div className="flex flex-1 items-center gap-2 px-3">
-                        {/* <SidebarTrigger /> */}
                         <Separator orientation="vertical" className="mr-2 h-4" />
                         <Breadcrumb>
                             <BreadcrumbList>
@@ -100,7 +101,7 @@ export default function Page() {
                     <div className="ml-auto px-3">
                         <NavActions />
                     </div>
-                </header>
+                </header> */}
                 <div className="flex flex-1 flex-col gap-4 px-4 py-10">
                     <Card className="mx-auto h-24 w-full max-w-3xl rounded-xl  flex justify-between items-center p-3">
                         <div>
@@ -156,6 +157,12 @@ export default function Page() {
                         </div>
                     </div> */}
                 </div>
+
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto p-3">
+                    <Projects />
+                </div>
+
+                <DockDemo />
             </SidebarInset>
         </SidebarProvider>
     )
