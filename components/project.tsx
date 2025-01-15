@@ -4,21 +4,19 @@ import BlurFade from "./ui/blur-fade"
 
 const DATA = [
     {
-        title: "Chat Collect",
-        href: "https://chatcollect.com",
-        dates: "Jan 2024 - Feb 2024",
+        title: "Big Data SISMAKO",
+        href: "https://sismako.smktibazma.sch.id/",
+        dates: "Juli 2023 - Present",
         active: true,
         description:
-            "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+            "",
         technologies: [
-            "Next.js",
-            "Typescript",
-            "PostgreSQL",
-            "Prisma",
-            "TailwindCSS",
-            "Stripe",
-            "Shadcn UI",
-            "Magic UI",
+            "Laravel 11",
+            "Bootstrap",
+            "MySQL",
+            "Teamwork",
+            "Collaboration",
+            "GitHub"
         ],
         links: [
             {
@@ -27,31 +25,31 @@ const DATA = [
                 icon: <Icons.globe className="size-3" />,
             },
         ],
-        image: "",
+        image: "/projects/sismako.jpg",
         video:
-            "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+        ""
+            // "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
     {
-        title: "Magic UI",
-        href: "https://magicui.design",
-        dates: "June 2023 - Present",
+        title: "MGMP TKJ Jawa Barat",
+        href: "https://jabar.mgmptkj.org/",
+        dates: "Jan 2025",
         active: true,
         description:
-            "Designed, developed and sold animated UI components for developers.",
+            "Platform web yang dirancang untuk mendukung kolaborasi dan komunikasi antar guru Teknik Komputer dan Jaringan (TKJ) di Jawa Barat, sekaligus menjadi pusat informasi dan kegiatan resmi MGMP TKJ Jawa Barat.",
         technologies: [
             "Next.js",
             "Typescript",
             "PostgreSQL",
-            "Prisma",
             "TailwindCSS",
-            "Stripe",
+            "Next Api Routes",
             "Shadcn UI",
             "Magic UI",
         ],
         links: [
             {
                 type: "Website",
-                href: "https://magicui.design",
+                href: "https://jabar.mgmptkj.org/",
                 icon: <Icons.globe className="size-3" />,
             },
             {
@@ -60,8 +58,8 @@ const DATA = [
                 icon: <Icons.github className="size-3" />,
             },
         ],
-        image: "",
-        video: "https://cdn.magicui.design/bento-grid.mp4",
+        image: "/projects/mgmptkj.jpg",
+        video: "",
     },
     {
         title: "llm.report",
@@ -121,9 +119,10 @@ const DATA = [
                 icon: <Icons.globe className="size-3" />,
             },
         ],
-        image: "",
+        image: "https://k31kdl3eukazsfrf.public.blob.vercel-storage.com/Capture-LEHjbtA4YOFJT18PE7XzYYw0MXvLQ8.JPG",
         video:
-            "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+        ""
+            // "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
     },
 ]
 

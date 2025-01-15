@@ -17,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Fadhil Rabbani",
-  description: "As a vocational school student majoring in Network Information Systems & Applications, I have high enthusiasm for web programming and digital innovation.",
+  description: "Sebagai siswa SMK jurusan Sistem & Aplikasi Informasi Jaringan, saya memiliki antusiasme yang tinggi terhadap pemrograman web dan inovasi digital.",
 };
 
 export default function RootLayout({
