@@ -9,26 +9,28 @@ const DATA = [
         dates: "Juli 2023 - Present",
         active: true,
         description:
-            "",
+            "Big Data Sismako adalah sebuah platform berbasis web yang di kembangkan untuk mengelola, menganalisis, dan memvisualisasi- kan data dalam skala besar, khusus untuk kebutuhan aplikasi sekolah.",
         technologies: [
             "Laravel 11",
             "Bootstrap",
             "MySQL",
             "Teamwork",
             "Collaboration",
-            "GitHub"
+            "GitHub",
+            "HTML5",
+            "CSS3",
+            "Javascript"
         ],
         links: [
             {
                 type: "Website",
-                href: "https://chatcollect.com",
+                href: "https://sismako.smktibazma.sch.id/",
                 icon: <Icons.globe className="size-3" />,
             },
         ],
         image: "/projects/sismako.jpg",
         video:
         ""
-            // "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
     {
         title: "MGMP TKJ Jawa Barat",
@@ -62,68 +64,63 @@ const DATA = [
         video: "",
     },
     {
-        title: "llm.report",
-        href: "https://llm.report",
-        dates: "April 2023 - September 2023",
+        title: "Absensi RFID Smart",
+        href: "#",
+        dates: "Oct 2024",
         active: true,
         description:
-            "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+            "Membangun API menggunakan Laravel 11 untuk mengintegrasikan sistem absensi berbasis RFID dengan perangkat IoT.",
         technologies: [
-            "Next.js",
-            "Typescript",
-            "PostgreSQL",
+            "Laravel 11",
+            "Internet of things",
             "Prisma",
-            "TailwindCSS",
-            "Shadcn UI",
-            "Magic UI",
             "Stripe",
-            "Cloudflare Workers",
         ],
         links: [
-            {
-                type: "Website",
-                href: "https://llm.report",
-                icon: <Icons.globe className="size-3" />,
-            },
-            {
-                type: "Source",
-                href: "https://github.com/dillionverma/llm.report",
-                icon: <Icons.github className="size-3" />,
-            },
+            // {
+            //     type: "Website",
+            //     href: "https://llm.report",
+            //     icon: <Icons.globe className="size-3" />,
+            // },
+            // {
+            //     type: "Source",
+            //     href: "https://github.com/dillionverma/llm.report",
+            //     icon: <Icons.github className="size-3" />,
+            // },
         ],
-        image: "",
-        video: "https://cdn.llm.report/openai-demo.mp4",
+        image: "/projects/systemrfid.png",
+        video: "",
     },
-    {
-        title: "Automatic Chat",
-        href: "https://automatic.chat",
-        dates: "April 2023 - March 2024",
-        active: true,
-        description:
-            "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
-        technologies: [
-            "Next.js",
-            "Typescript",
-            "PostgreSQL",
-            "Prisma",
-            "TailwindCSS",
-            "Shadcn UI",
-            "Magic UI",
-            "Stripe",
-            "Cloudflare Workers",
-        ],
-        links: [
-            {
-                type: "Website",
-                href: "https://automatic.chat",
-                icon: <Icons.globe className="size-3" />,
-            },
-        ],
-        image: "https://k31kdl3eukazsfrf.public.blob.vercel-storage.com/Capture-LEHjbtA4YOFJT18PE7XzYYw0MXvLQ8.JPG",
-        video:
-        ""
-            // "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
-    },
+    // {
+    //     title: "Automatic Chat",
+    //     href: "https://automatic.chat",
+    //     dates: "April 2023 - March 2024",
+    //     active: true,
+    //     description:
+    //         "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+    //     technologies: [
+    //         "Next.js",
+    //         "Typescript",
+    //         "PostgreSQL",
+    //         "Prisma",
+    //         "TailwindCSS",
+    //         "Shadcn UI",
+    //         "Magic UI",
+    //         "Stripe",
+    //         "Cloudflare Workers",
+    //     ],
+    //     links: [
+    //         {
+    //             type: "Website",
+    //             href: "https://automatic.chat",
+    //             icon: <Icons.globe className="size-3" />,
+    //         },
+    //     ],
+    //     image: "https://k31kdl3eukazsfrf.public.blob.vercel-storage.com/Capture-LEHjbtA4YOFJT18PE7XzYYw0MXvLQ8.JPG",
+    //     video:
+    //     ""
+    //         // "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+    // },
 ]
 
 const BLUR_FADE_DELAY = 0.04;

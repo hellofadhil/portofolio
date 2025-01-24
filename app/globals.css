@@ -14,10 +14,13 @@ body {
 
 
 
-
-
 @layer base {
   :root {
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
     --background: 0 0% 100%;
     --foreground: 20 14.3% 4.1%;
     --card: 0 0% 100%;
@@ -72,6 +75,7 @@ body {
     --chart-5: 340 75% 55%;
   }
 }
+
 
 
 @layer base {

@@ -1,0 +1,33 @@
+'use client'
+import { AuroraText } from "@/components/ui/aurora-text";
+import { Card } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
+export function Hello() {
+    return (
+        <Card className="mx-auto h-auto w-full max-w-2xl rounded-xl flex flex-col sm:flex-row justify-between items-center p-6 gap-4">
+            <div className="sm:hidden flex justify-center">
+                {/* Avatar muncul di atas teks untuk layar kecil */}
+                <Avatar className="h-[80px] w-[80px] border">
+                    <AvatarImage src="https://github.com/shadcn.png" alt="Fadhil Rabbani" />
+                    <AvatarFallback>FR</AvatarFallback>
+                </Avatar>
+            </div>
+            <div className="text-center sm:text-left">
+                <h1 className="font-bold tracking-tighter text-3xl sm:text-4xl">
+                    Hi, I&apos;m <AuroraText>Fadhil!</AuroraText>
+                </h1>
+                <p className="text-sm text-muted-foreground">
+                    Web Developer with 2+ years of experience
+                </p>
+            </div>
+            <div className="hidden sm:block">
+                {/* Avatar tetap di kanan untuk layar lebih besar */}
+                <Avatar className="h-[80px] w-[80px] border">
+                    <AvatarImage src="https://github.com/shadcn.png" alt="Fadhil Rabbani" />
+                    <AvatarFallback>FR</AvatarFallback>
+                </Avatar>
+            </div>
+        </Card>
+    );
+}
