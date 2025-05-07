@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+
 const nextConfig = {
+  i18n: {
+    defaultLocale: 'en',  // Bahasa default
+    locales: ['en', 'id'],  // Daftar bahasa yang didukung
+  },
     images: {
       remotePatterns: [
         {
