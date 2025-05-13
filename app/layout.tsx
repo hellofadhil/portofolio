@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale } from "next-intl/server";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,18 +19,31 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Fadhil Rabbani",
-  description: "Sebagai siswa SMK jurusan Sistem & Aplikasi Informasi Jaringan, saya memiliki antusiasme yang tinggi terhadap pemrograman web dan inovasi digital.",
+  description:
+    "Sebagai siswa SMK jurusan Sistem & Aplikasi Informasi Jaringan, saya memiliki antusiasme yang tinggi terhadap pemrograman web dan inovasi digital.",
 };
 
-export default function RootLayout({
+// export default function RootLayout({
+//   children,
+//   params
+// }: Readonly<{
+//   children: React.ReactNode;
+// }>) {
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+  
+}) {
+  const locale = await getLocale();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
-      <meta name="google-site-verification" content="iFO3waheOPytZSv7UcSrXaGLjgEP2LtQahNwRFt5ARA" />
+        <meta
+          name="google-site-verification"
+          content="iFO3waheOPytZSv7UcSrXaGLjgEP2LtQahNwRFt5ARA"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -39,7 +54,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <NextIntlClientProvider>{children}</NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>
