@@ -15,17 +15,17 @@ export interface SocialItem {
 export const DATA = {
   navbar: [
     {
-      href: "/home",
+      href: "/",
       label: "Home",
       icon: Home,
     },
     {
-      href: "/about",
+      href: "#about",
       label: "About",
       icon: Info,
     },
     {
-      href: "/portfolio",
+      href: "#projects",
       label: "Portfolio",
       icon: Folder,
     },
@@ -33,19 +33,19 @@ export const DATA = {
   contact: {
     social: {
       github: {
-        url: "https://github.com/username",
+        url: "https://github.com/hellofadhil",
         icon: Github,
         navbar: true,
       },
       twitter: {
         url: "https://twitter.com/username",
         icon: Twitter,
-        navbar: true,
+        navbar: false,
       },
       linkedin: {
-        url: "https://linkedin.com/in/username",
+        url: "https://linkedin.com/in/infofadhil",
         icon: Linkedin,
-        navbar: false,
+        navbar: true,
       },
     } as Record<string, SocialItem>,
   },

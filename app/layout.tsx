@@ -3,8 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-import { NextIntlClientProvider } from "next-intl";
-import { getLocale } from "next-intl/server";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,10 +33,9 @@ export default async function RootLayout({
   children: React.ReactNode;
   
 }) {
-  const locale = await getLocale();
 
   return (
-    <html lang={locale}>
+    <html >
       <head>
         <meta
           name="google-site-verification"
@@ -54,7 +51,7 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+       {children}
         </ThemeProvider>
       </body>
     </html>

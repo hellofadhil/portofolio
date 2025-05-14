@@ -1,4 +1,3 @@
-'use client';
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
@@ -8,78 +7,77 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { DATA } from "@/data/data";
+import { DATA } from "@/data/data"; // Data diimpor dari file navbar.tsx
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { useRouter, usePathname } from 'next/navigation';
-import { useLocale, useTranslations } from 'next-intl';
 
 export default function Navbar() {
-  const t = useTranslations('Navbar');
-  const router = useRouter();
-  const pathname = usePathname();
-  const locale = useLocale();
-
-  const changeLanguage = (newLocale: string) => {
-    // Remove current locale from pathname
-    const pathWithoutLocale = pathname.replace(new RegExp(`^/${locale}`), '');
-    router.push(`/${newLocale}${pathWithoutLocale}`);
-  };
-
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
-      {/* ... (kode sebelumnya tetap sama) ... */}
+      <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
+      <Dock className="z-50 pointer-events-auto relative mx-auto flex min-h-full h-full items-center px-1 bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] ">
+        {/* Render Navbar Items */}
+        {DATA.navbar.map((item) => (
+          <DockIcon key={item.href}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  href={item.href}
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "icon" }),
+                    "size-12"
+                  )}
+                >
+                  <item.icon className="size-4" />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{item.label}</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
+        ))}
 
-      {/* Mode Toggle */}
-      <DockIcon>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <ModeToggle />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>{t('theme')}</p>
-          </TooltipContent>
-        </Tooltip>
-      </DockIcon>
+        <Separator orientation="vertical" className="h-full" />
 
-      {/* Language Switcher */}
-      <DockIcon>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <button
-              onClick={() => changeLanguage('en')}
-              className={cn(
-                buttonVariants({ variant: "ghost", size: "icon" }),
-                "size-12"
-              )}
-            >
-              EN
-            </button>
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>{t('english')}</p>
-          </TooltipContent>
-        </Tooltip>
-      </DockIcon>
+        {/* Render Social Items */}
+        {Object.entries(DATA.contact.social)
+          .filter(([, social]) => social.navbar)
+          .map(([name, social]) => (
+            <DockIcon key={name}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link
+                    href={social.url}
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12"
+                    )}
+                  >
+                    <social.icon className="size-4" />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{name}</p>
+                </TooltipContent>
+              </Tooltip>
+            </DockIcon>
+          ))}
 
-      <DockIcon>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <button
-              onClick={() => changeLanguage('id')}
-              className={cn(
-                buttonVariants({ variant: "ghost", size: "icon" }),
-                "size-12"
-              )}
-            >
-              ID
-            </button>
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>{t('indonesian')}</p>
-          </TooltipContent>
-        </Tooltip>
-      </DockIcon>
+        <Separator orientation="vertical" className="h-full py-2" />
+
+        {/* Mode Toggle */}
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <ModeToggle />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Theme</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
+      </Dock>
     </div>
   );
 }

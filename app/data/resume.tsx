@@ -83,23 +83,27 @@ export const DATA = {
 
   experience: [
     {
-      title: "Senior Web Developer",
-      company: "Tech Corp",
-      duration: "2022 - Present",
-      description: "Leading frontend development team and implementing modern web solutions",
+      title: "Junior Web Developer",
+      company: "SMK TI Bazma",
+      duration: "Jan 2023 - Present",
+      description: `Designed and developed a school application using Next.js & Nest.js.
+      Increased RFID-based attendance system efficiency by up to 90% through IoT API development.
+      Managed internal server and application deployment using Proxmox.`,
     },
     {
-      title: "Full Stack Developer",
+      title: "Freelance Web Developer",
       company: "Digital Agency",
       duration: "2020 - 2022",
-      description: "Developed and maintained multiple client projects",
+     description: `Built modern websites for individual clients and small businesses with responsive UI and high performance.
+      Responsible for the entire development process from requirements gathering to deployment.`,
     },
-    {
-      title: "Junior Developer",
-      company: "Startup Inc",
-      duration: "2018 - 2020",
-      description: "Worked on various web applications and learned modern technologies",
-    },
+    // {
+    //   title: "Junior Developer",
+    //   company: "Startup Inc",
+    //   duration: "2018 - 2020",
+    //   description:
+    //     "Worked on various web applications and learned modern technologies",
+    // },
   ],
 
   education: [
